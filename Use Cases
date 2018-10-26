@@ -1,0 +1,132 @@
+List of Use Cases for Project 3
+
+Inventory Management
+
+●	Add a new item to database
+
+○	Admin adds an item to the database
+  ■	New item is added
+  ■	Quantity is updated
+
+○	Employee adds an item to the database
+  ■	New item is added
+  ■	Quantity is updated
+    ●	Update existing item from database
+
+○	Admin updates quantity
+  ■	Locate item in database
+  ■	item is found
+    ●	item quantity is updated.
+  ■	item is not found
+    ●	create new item
+    ●	quantity is updated
+
+○	Employee updates quantity
+  ■	Locate item in database
+  ■	item is found
+    ●	item quantity is updated.
+  ■	item is not found
+    ●	create new item
+    ●	quantity is updated
+    ●	Remove item from database
+
+○	Admin removes item
+  ■	Check if db is empty or not
+   ●	error if empty
+  ■	Search for item
+    ●	error if not found
+  ■	delete item
+
+○	Employee removes item
+  ■	Check if db is empty or not
+    ●	error if empty
+  ■	Search for item
+    ●	error if not found
+  ■	delete item
+
+Transaction Management
+
+●	Create Sale Transaction
+  ○	Customer creates transaction through the website
+  ■	A sale transaction is created
+  ■	Order is built
+  ■	confirm order
+  ■	Transaction is set to a “pending” state
+
+○	Employee creates transaction at the store
+  ■	A sale transaction is created
+  ■	Order is built
+  ■	confirm order
+  ■	close transaction
+    ●	Close Transaction
+
+○	Employee opens pending transaction
+  ■	Quantities are updated in inventory
+  ■	Payment is received/ accounting is updated
+  ■	Transaction is set to completed.	
+    ●	Delete Sale Transaction
+
+○	Customer
+  ■	Customer enters transaction ID
+  ■	Transaction is found or not found
+  ■	If found, delete transaction
+
+○	Employee
+  ■	Order is cancelled.
+  ■	Enter transaction ID
+  ■	Locate transaction or not
+  ■	If found, delete transaction.
+
+Accounting Management
+
+●	Software Administrators are allowed to:
+
+○	Track income from sales transactions
+  ■	Income from sale transactions are added up
+
+○	Track expenses
+  ■	Expenses such as salaries and supplies are added up
+
+○	Track profit
+  ■	The income from the sales is subtracted by the company expenses
+
+○	Track employee salaries
+  ■	Total employee salaries are added to a salaries variable
+
+○	Track ordering of new supplies
+  ■	Total cost of items are added to supplies variable
+
+○	Print documents
+  ■	Prints the balance sheet, cash flow, and invoice
+
+User Management
+
+●	Customer management
+
+○	Create new customer account
+  ■	Customer inputs their name
+  ■	Customer inputs their address
+  ■	Customer inputs their phone number
+
+○	Edit customer account
+  ■	Customer can change their name
+  ■	Customer can change their address
+  ■	Customer can change phone number
+
+●	Employee manages
+  ○	Employee creates customer account
+  ○	Employee edits customer account
+
+●	Admin management
+  ○	Add/Edit customer, employee, admin
+
+Hardware Store Web Form
+
+●	Customer can contact customer support web form
+  ○	Make sure customer has account
+  ○	Message is added to queue of unanswered messages
+
+●	Employees answer message from the queue
+  ○	Employees respond to customer via email
+  ○	Record Employee response along with their ID
+  ○	Answer is added to a pool of answered 
